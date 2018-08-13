@@ -1,0 +1,34 @@
+<view class='row-1'>
+    <view class='row'>
+    <view class='line-text'>XX.XX</view>
+    <view class='line'>
+      <view class='line-left'></view>
+      <view class='line-center'>NICEDAY</view>
+      <view class='line-right'></view>
+    </view>
+  </view>
+   <swiper class='swiper-box swiperClass'  indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1000" previous-margin="45px" next-margin="45px" circular bindchange="bindchange" >
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item class='swiper-item'>
+      <image src="{{item.ImgUrl}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+      </image>
+      <view class='item-txt'>
+        <view class='inner-title'>{{item.title}}</view>
+        <view class='inner-down'>
+          <view class='inner-pro'>{{item.desc}}</view>
+        <image src='/content/images/right.png' class='inner-right'></image>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+  </swiper>
+</view>
+
+<view class="ripple" style="{{rippleStyle}}"></view>
+<view class="container" bindtouchstart="containerTap"></view>
+
+<view wx:for="{{words}}" wx:key="{{item.viewid}}">
+    <navigator url="../text/text?index={{item.viewid}}">
+        <view class="item-style">{{item.message}}</view>
+    </navigator>
+</view>

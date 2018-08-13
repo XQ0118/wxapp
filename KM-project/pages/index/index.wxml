@@ -1,0 +1,115 @@
+<!--index.wxml-->
+<!-- 天气 -->
+<view class='weather'>
+  <navigator url='../weather/weather?title=weather' hover-class="none">
+    <view class='weather-item'>
+      <image src='/content/images/notice.png'></image>
+      <view>冷暖自知</view>
+      <image src='/content/images/right.png' class='weather-right'></image>
+  </view>
+  </navigator>
+</view>
+<!-- 轮播图 -->
+<view class='slide'>
+    <swiper  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#fff" indicator-active-color="rgba(244,0,0,0.8)">
+  <block wx:for="{{ImgUrls}}" wx:key="{{}}">
+    <swiper-item>
+      <image src="{{item}}"  mode="aspectFill" style='width:100%;'/>
+    </swiper-item>
+  </block>
+</swiper>
+  </view>
+<!-- 庆典 -->
+<view class='row-1'>
+    <view class='row'>
+    <view class='line-text'>庆典</view>
+    <view class='line'>
+      <view class='line-left'></view>
+      <view class='line-center'>CELEBRATION</view>
+      <view class='line-right'></view>
+    </view>
+  </view>
+   <swiper class='swiper-box swiperClass'   indicator-dots  interval="2000" duration="1000" previous-margin="45px" next-margin="45px" circular bindchange="bindchange" indicator-color="#fff" >
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item class='swiper-item'>
+      <image src="{{item.ImgUrl}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+      </image>
+      <view class='item-txt' bindtap='changeTolist'>
+        <view class='inner-title'>{{item.title}}</view>
+        <view class='inner-down'>
+          <view class='inner-pro'>{{item.desc}}</view>
+        <image src='/content/images/right.png' class='inner-right'></image>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+  </swiper>
+</view>
+<!-- 展会 -->
+<view class='row-2'>
+    <view class='row'>
+    <view class='line-text'>展会</view>
+    <view class='line'>
+      <view class='line-left'></view>
+      <view class='line-center'>EXHIBITION</view>
+      <view class='line-right'></view>
+    </view>
+  </view>
+   <swiper class='swiper-box swiperClass'   indicator-dots  interval="2000" duration="1000" previous-margin="45px" next-margin="45px" circular bindchange="bindchange1" indicator-color="#fff">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item class='swiper-item'>
+      <image src="{{item.ImgUrl}}" class="slide-image {{swiperIndex1 == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+      </image>
+      <view class='item-txt' bindtap='changeTolist1'>
+        <view class='inner-title'>{{item.title}}</view>
+        <view class='inner-down'>
+          <view class='inner-pro'>{{item.desc}}</view>
+        <image src='/content/images/right.png' class='inner-right'></image>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+  </swiper>
+</view>
+<!-- 装潢 -->
+<view class='row-3'>
+    <view class='row'>
+    <view class='line-text'>装潢</view>
+    <view class='line'>
+      <view class='line-left'></view>
+      <view class='line-center'>DECORATION</view>
+      <view class='line-right'></view>
+    </view>
+  </view>
+   <swiper class='swiper-box swiperClass'   indicator-dots  interval="2000" duration="1000" previous-margin="45px" next-margin="45px" circular bindchange="bindchange2" indicator-color="#fff">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item class='swiper-item'>
+      <image src="{{item.ImgUrl}}" class="slide-image {{swiperIndex2 == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+      </image>
+      <view class='item-txt'bindtap='changeTolist2'>
+        <view class='inner-title'>{{item.title}}</view>
+        <view class='inner-down'>
+          <view class='inner-pro'>{{item.desc}}</view>
+        <image src='/content/images/right.png' class='inner-right'></image>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+  </swiper>
+</view>
+<!-- footer -->
+<view class='footer'>
+  <view class='footer-text'>公众号：源初舍</view>
+  <view class='footer-line'>
+      <view class='footer-left'></view>
+      <view class='footer-center'>客官,我是有底线的</view>
+      <view class='footer-right'></view>
+    </view>
+</view>
+
+
+ 
+  
+
+

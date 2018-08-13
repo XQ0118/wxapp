@@ -1,0 +1,76 @@
+<!-- 榜单对应的跳转页面 -->
+<view class="page"> 
+<!-- 顶部样式 -->
+  <view class='row'>
+    <view class='line-text'>庆典</view>
+    <view class='line'>
+      <view class='line-left'></view>
+      <view class='line-center'>CELEBRATION</view>
+      <view class='line-right'></view>
+    </view>
+  </view>
+<!-- 图片 -->
+  <view class='image'>
+
+      <image src="{{ImgUrla}}"  mode="aspectFill" />
+    
+  </view>
+  <!--顶部导航栏-->  
+  <view class="swiper-tab">  
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">婚庆</view>  
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">年会</view>  
+     
+  </view>  
+  <!--内容主体-->  
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">  
+    <swiper-item>
+    <view class='tab'>
+      <block wx:for="{{ImgUrls}}" wx:key="{{}}">
+      <view class='tab-box'>
+        <image class='tab-image' src="{{item.ImgUrl}}"  mode="aspectFill" />
+        <view class='box-txt'>
+          <view class='main'>
+          <image class='title' src='/content/images/Sun.png' mode="aspectFill"></image>
+          <view class='txt-title'>主题：{{item.title}}</view>
+          </view>
+          <view class='intro'>
+          <image class='pro' src='/content/images/star.png' mode="aspectFill"></image>
+          <view class='txt-pro'>简介：{{item.desc}}</view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>  
+  
+    </swiper-item>  
+    <swiper-item>  
+        <view class='tab'>
+      <block wx:for="{{ImgUrls1}}" wx:key="{{}}">
+      <view class='tab-box'>
+        <image class='tab-image' src="{{item.ImgUrl}}"  mode="aspectFill" />
+        <view class='box-txt'>
+          <view class='main'>
+          <image class='title' src='/content/images/Sun.png' mode="aspectFill"></image>
+          <view class='txt-title'>主题：{{item.title}}</view>
+          </view>
+          <view class='intro'>
+          <image class='pro' src='/content/images/star.png' mode="aspectFill"></image>
+          <view class='txt-pro'>简介：{{item.desc}}</view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>  
+    </swiper-item>   
+  </swiper> 
+
+</view>  
+<!-- footer -->
+<view class='footer'>
+  <view class='footer-text'>公众号：源初舍</view>
+  <view class='footer-line'>
+      <view class='footer-left'></view>
+      <view class='footer-center'>客官,我是有底线的</view>
+      <view class='footer-right'></view>
+    </view>
+</view>

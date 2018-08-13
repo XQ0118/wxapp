@@ -1,0 +1,69 @@
+<view class='containe'>
+  <view class='row-1'>
+    <view class='gps'>
+      <view class='city'>{{currentCity}}</view>
+      <image  src="/content/images/down.png" mode="aspectFill" ></image>
+    </view>
+    <view class='wx-input'>
+      <view class='input-search'>
+        <image src="/content/images/search2.png" mode="aspectFill"></image>
+      </view>
+      <input class='inner-input'  placeholder="XXXXXX"></input>
+    </view>
+  </view>
+  <view class="row-2">
+				<view class="col-xs-3">
+					<view class="round-1" style="background:#B22222"></view>
+					<view class="text-1">XX</view>
+				</view>
+				<view class="col-xs-3">
+					<view class="round-1" style="background:#FF00FF"></view>
+					<view class="text-1">XX</view>
+				</view>
+				<view class="col-xs-3">
+					<view class="round-1" style="background:#DCDCDC"></view>
+					<view class="text-1">XX</view>
+				</view>
+				<view class="col-xs-3">
+					<view class="round-1" style="background:#DAA520"></view>
+					<view class="text-1">XX</view>
+				</view>
+	</view>
+  <view class="row-3">
+				<view class="col-xs-3">
+					<view class="round-2" style="background:#ADFF2F"></view>
+					<view class="text-2">XX</view>
+				</view>
+				<view class="col-xs-3">
+					<view class="round-2" style="background:#F0FFF0"></view>
+					<view class="text-2">XX</view>
+				</view>
+				<view class="col-xs-3">
+					<view class="round-2" style="background:#FF69B4"></view>
+					<view class="text-2">XX</view>
+				</view>
+				<view class="col-xs-3">
+					<view class="round-2" style="background:#CD5C5C"></view>
+					<view class="text-2">XX</view>
+				</view>
+	</view>
+  
+  <view class='mid'>
+    <view class='mid-item'>XXXX</view>
+    <view class='mid-item'>XXXX</view>
+  </view>
+
+  <view class='row-4'>
+    <view class='line-text'>XX.XX</view>
+    <view class='line'>
+      <view class='line-left'></view>
+      <view class='line-center'>NICEDAY</view>
+      <view class='line-right'></view>
+    </view>
+  </view>
+
+  <view class='main'>
+    <view class='main-item'></view>
+  </view>
+
+</view>
